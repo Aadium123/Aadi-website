@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cm</title>
+  <link rel="stylesheet" href="BTSP/bootstrap.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style media="screen">
+  h2{color: #687864;}
+  h3{color: #31708E}
+  h4{color: #508585}
+  h6{color: #4E4E50}
+  </style>
+  </head>
+  <body>
+    <center>
+    <Font face="arial">
+    <h2>My email:</h2><h4><a href="mailto:aadi.p.um@gmail.com">aadi.p.um@gmail.com</a>
+      <hr></H4>
+    <p><h2>My ph.no:</h2><h4><b>+974</b>50227692</h4></p>
+    <hr>
+    <p><center><a href="https://www.facebook.com/aadi.umrani.7" target="_blank"><button class="btn btn-lg btn-outline-dark">
+      My Facebook page</button></a>
+      <hr>
+      <div class="w3-container w3-padding-32 w3-content">
+ <div id="googleMap" style="width:85%;height:500px"></div>
+ </div>
+ <script>
+   function myMap()
+ {
+   myCenter=new google.maps.LatLng(25.241962, 51.55965);
+   var mapOptions= {
+     center:myCenter,
+     zoom:18, scrollwheel: false, draggable: true,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+   var marker = new google.maps.Marker({
+     position: myCenter,
+ 	animation: google.maps.Animation.BOUNCE,
+   });
+   marker.setMap(map);
+
+ google.maps.event.addListener(marker,'click',function() {
+   var pos = map.getZoom();
+   map.setZoom(19);
+   map.setCenter(marker.getPosition());
+   infowindow.open(map,marker);
+ });
+ var infowindow = new google.maps.InfoWindow({
+   content:"My Home"
+   });
+
+ }
+
+ </script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzWTi-IVhY6mRMhAGa5ld9yepi5ezdhJk&callback=myMap"></script>
+   <p>
+  <div class="w3-container w3-green">
+   <center>
+   <a href="Ahom.html"><button class="btn btn-lg btn-outline-light">
+      🏠</button></a>
+  </body>
+</html>
